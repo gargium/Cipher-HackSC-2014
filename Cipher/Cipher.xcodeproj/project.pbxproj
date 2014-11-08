@@ -26,6 +26,8 @@
 		9E90F8271A0E921600B0B1FA /* happyFace.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E90F8261A0E921600B0B1FA /* happyFace.png */; };
 		9E90F8291A0E93FC00B0B1FA /* dividerLine copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E90F8281A0E93FC00B0B1FA /* dividerLine copy.png */; };
 		9E90F82C1A0E9E6D00B0B1FA /* SCErrorHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E90F82B1A0E9E6D00B0B1FA /* SCErrorHandler.m */; };
+		D537C73D1A0EBC2A0037AADC /* beat.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D537C73C1A0EBC2A0037AADC /* beat.m4a */; };
+		D537C7401A0EBD720037AADC /* RecordScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = D537C73F1A0EBD720037AADC /* RecordScreen.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,9 @@
 		9E90F8281A0E93FC00B0B1FA /* dividerLine copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dividerLine copy.png"; sourceTree = "<group>"; };
 		9E90F82A1A0E9E6D00B0B1FA /* SCErrorHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCErrorHandler.h; sourceTree = "<group>"; };
 		9E90F82B1A0E9E6D00B0B1FA /* SCErrorHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCErrorHandler.m; sourceTree = "<group>"; };
+		D537C73C1A0EBC2A0037AADC /* beat.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = beat.m4a; path = ../beat.m4a; sourceTree = "<group>"; };
+		D537C73E1A0EBD720037AADC /* RecordScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordScreen.h; sourceTree = "<group>"; };
+		D537C73F1A0EBD720037AADC /* RecordScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordScreen.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +114,7 @@
 		9E90F7E31A0E08C300B0B1FA /* Cipher */ = {
 			isa = PBXGroup;
 			children = (
+				D537C73C1A0EBC2A0037AADC /* beat.m4a */,
 				9E90F8281A0E93FC00B0B1FA /* dividerLine copy.png */,
 				9E90F81E1A0E569A00B0B1FA /* Wolf in the City Light.ttf */,
 				9E90F8151A0E26C700B0B1FA /* FacebookSDK.framework */,
@@ -128,6 +134,8 @@
 				9E90F8171A0E377C00B0B1FA /* SCSettings.h */,
 				9E90F8181A0E377C00B0B1FA /* SCSettings.m */,
 				9E90F7EE1A0E08C400B0B1FA /* Main.storyboard */,
+				D537C73E1A0EBD720037AADC /* RecordScreen.h */,
+				D537C73F1A0EBD720037AADC /* RecordScreen.m */,
 				9E90F82A1A0E9E6D00B0B1FA /* SCErrorHandler.h */,
 				9E90F82B1A0E9E6D00B0B1FA /* SCErrorHandler.m */,
 				9E90F7F11A0E08C400B0B1FA /* Images.xcassets */,
@@ -256,6 +264,7 @@
 				9E90F7F51A0E08C400B0B1FA /* LaunchScreen.xib in Resources */,
 				9E90F8211A0E8F1900B0B1FA /* back-32.png in Resources */,
 				9E90F8251A0E901900B0B1FA /* dividerLine.png in Resources */,
+				D537C73D1A0EBC2A0037AADC /* beat.m4a in Resources */,
 				9E90F8291A0E93FC00B0B1FA /* dividerLine copy.png in Resources */,
 				9E90F8231A0E8FA000B0B1FA /* back-25.png in Resources */,
 				9E90F8271A0E921600B0B1FA /* happyFace.png in Resources */,
@@ -285,6 +294,7 @@
 				9E90F8191A0E377C00B0B1FA /* SCSettings.m in Sources */,
 				9E90F8141A0E22B500B0B1FA /* Feed.m in Sources */,
 				9E90F7EA1A0E08C300B0B1FA /* AppDelegate.m in Sources */,
+				D537C7401A0EBD720037AADC /* RecordScreen.m in Sources */,
 				9E90F7E71A0E08C300B0B1FA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -486,6 +496,7 @@
 				9E90F8061A0E08C400B0B1FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9E90F8071A0E08C400B0B1FA /* Build configuration list for PBXNativeTarget "CipherTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +505,7 @@
 				9E90F8091A0E08C400B0B1FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
