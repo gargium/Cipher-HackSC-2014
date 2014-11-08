@@ -12,7 +12,6 @@
 		9E90F7ED1A0E08C300B0B1FA /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E90F7EC1A0E08C300B0B1FA /* Login.m */; };
 		9E90F7F01A0E08C400B0B1FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E90F7EE1A0E08C400B0B1FA /* Main.storyboard */; };
 		9E90F7F21A0E08C400B0B1FA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E90F7F11A0E08C400B0B1FA /* Images.xcassets */; };
-		9E90F7F51A0E08C400B0B1FA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E90F7F31A0E08C400B0B1FA /* LaunchScreen.xib */; };
 		9E90F8011A0E08C400B0B1FA /* CipherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E90F8001A0E08C400B0B1FA /* CipherTests.m */; };
 		9E90F80C1A0E08EF00B0B1FA /* init.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E90F80B1A0E08EF00B0B1FA /* init.png */; };
 		9E90F8141A0E22B500B0B1FA /* Feed.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E90F8131A0E22B500B0B1FA /* Feed.m */; };
@@ -50,7 +49,6 @@
 		9E90F7EC1A0E08C300B0B1FA /* Login.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Login.m; sourceTree = "<group>"; };
 		9E90F7EF1A0E08C400B0B1FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9E90F7F11A0E08C400B0B1FA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		9E90F7F41A0E08C400B0B1FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		9E90F7FA1A0E08C400B0B1FA /* CipherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CipherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E90F7FF1A0E08C400B0B1FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E90F8001A0E08C400B0B1FA /* CipherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CipherTests.m; sourceTree = "<group>"; };
@@ -139,7 +137,6 @@
 				9E90F82A1A0E9E6D00B0B1FA /* SCErrorHandler.h */,
 				9E90F82B1A0E9E6D00B0B1FA /* SCErrorHandler.m */,
 				9E90F7F11A0E08C400B0B1FA /* Images.xcassets */,
-				9E90F7F31A0E08C400B0B1FA /* LaunchScreen.xib */,
 				9E90F7E41A0E08C300B0B1FA /* Supporting Files */,
 			);
 			path = Cipher;
@@ -261,7 +258,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E90F7F01A0E08C400B0B1FA /* Main.storyboard in Resources */,
-				9E90F7F51A0E08C400B0B1FA /* LaunchScreen.xib in Resources */,
 				9E90F8211A0E8F1900B0B1FA /* back-32.png in Resources */,
 				9E90F8251A0E901900B0B1FA /* dividerLine.png in Resources */,
 				D537C73D1A0EBC2A0037AADC /* beat.m4a in Resources */,
@@ -324,14 +320,6 @@
 				9E90F7EF1A0E08C400B0B1FA /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		9E90F7F31A0E08C400B0B1FA /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9E90F7F41A0E08C400B0B1FA /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -417,6 +405,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -432,6 +421,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
