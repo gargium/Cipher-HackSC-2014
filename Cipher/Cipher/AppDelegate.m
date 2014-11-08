@@ -20,11 +20,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-<<<<<<< Updated upstream
-    // bitch
-=======
     [FBLoginView class];
->>>>>>> Stashed changes
     return YES;
 }
 
