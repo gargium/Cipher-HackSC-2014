@@ -9,12 +9,23 @@
 /* Begin PBXBuildFile section */
 		9E90F7E71A0E08C300B0B1FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E90F7E61A0E08C300B0B1FA /* main.m */; };
 		9E90F7EA1A0E08C300B0B1FA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E90F7E91A0E08C300B0B1FA /* AppDelegate.m */; };
-		9E90F7ED1A0E08C300B0B1FA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E90F7EC1A0E08C300B0B1FA /* ViewController.m */; };
+		9E90F7ED1A0E08C300B0B1FA /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E90F7EC1A0E08C300B0B1FA /* Login.m */; };
 		9E90F7F01A0E08C400B0B1FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E90F7EE1A0E08C400B0B1FA /* Main.storyboard */; };
 		9E90F7F21A0E08C400B0B1FA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E90F7F11A0E08C400B0B1FA /* Images.xcassets */; };
 		9E90F7F51A0E08C400B0B1FA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E90F7F31A0E08C400B0B1FA /* LaunchScreen.xib */; };
 		9E90F8011A0E08C400B0B1FA /* CipherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E90F8001A0E08C400B0B1FA /* CipherTests.m */; };
 		9E90F80C1A0E08EF00B0B1FA /* init.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E90F80B1A0E08EF00B0B1FA /* init.png */; };
+		9E90F8141A0E22B500B0B1FA /* Feed.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E90F8131A0E22B500B0B1FA /* Feed.m */; };
+		9E90F8161A0E26C700B0B1FA /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E90F8151A0E26C700B0B1FA /* FacebookSDK.framework */; };
+		9E90F8191A0E377C00B0B1FA /* SCSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E90F8181A0E377C00B0B1FA /* SCSettings.m */; };
+		9E90F81B1A0E508400B0B1FA /* BearBlur.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E90F81A1A0E508400B0B1FA /* BearBlur.png */; };
+		9E90F81F1A0E569A00B0B1FA /* Wolf in the City Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9E90F81E1A0E569A00B0B1FA /* Wolf in the City Light.ttf */; };
+		9E90F8211A0E8F1900B0B1FA /* back-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E90F8201A0E8F1900B0B1FA /* back-32.png */; };
+		9E90F8231A0E8FA000B0B1FA /* back-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E90F8221A0E8FA000B0B1FA /* back-25.png */; };
+		9E90F8251A0E901900B0B1FA /* dividerLine.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E90F8241A0E901900B0B1FA /* dividerLine.png */; };
+		9E90F8271A0E921600B0B1FA /* happyFace.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E90F8261A0E921600B0B1FA /* happyFace.png */; };
+		9E90F8291A0E93FC00B0B1FA /* dividerLine copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E90F8281A0E93FC00B0B1FA /* dividerLine copy.png */; };
+		9E90F82C1A0E9E6D00B0B1FA /* SCErrorHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E90F82B1A0E9E6D00B0B1FA /* SCErrorHandler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,15 +44,29 @@
 		9E90F7E61A0E08C300B0B1FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9E90F7E81A0E08C300B0B1FA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9E90F7E91A0E08C300B0B1FA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9E90F7EB1A0E08C300B0B1FA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9E90F7EC1A0E08C300B0B1FA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9E90F7EB1A0E08C300B0B1FA /* Login.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Login.h; sourceTree = "<group>"; };
+		9E90F7EC1A0E08C300B0B1FA /* Login.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Login.m; sourceTree = "<group>"; };
 		9E90F7EF1A0E08C400B0B1FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9E90F7F11A0E08C400B0B1FA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9E90F7F41A0E08C400B0B1FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		9E90F7FA1A0E08C400B0B1FA /* CipherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CipherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E90F7FF1A0E08C400B0B1FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E90F8001A0E08C400B0B1FA /* CipherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CipherTests.m; sourceTree = "<group>"; };
-		9E90F80B1A0E08EF00B0B1FA /* init.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = init.png; sourceTree = "<group>"; };
+		9E90F80B1A0E08EF00B0B1FA /* init.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = init.png; path = ../Assets/init.png; sourceTree = "<group>"; };
+		9E90F8121A0E22B500B0B1FA /* Feed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Feed.h; sourceTree = "<group>"; };
+		9E90F8131A0E22B500B0B1FA /* Feed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Feed.m; sourceTree = "<group>"; };
+		9E90F8151A0E26C700B0B1FA /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		9E90F8171A0E377C00B0B1FA /* SCSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCSettings.h; sourceTree = "<group>"; };
+		9E90F8181A0E377C00B0B1FA /* SCSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCSettings.m; sourceTree = "<group>"; };
+		9E90F81A1A0E508400B0B1FA /* BearBlur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BearBlur.png; sourceTree = "<group>"; };
+		9E90F81E1A0E569A00B0B1FA /* Wolf in the City Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Wolf in the City Light.ttf"; path = "../Wolf in the City Light.ttf"; sourceTree = "<group>"; };
+		9E90F8201A0E8F1900B0B1FA /* back-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-32.png"; sourceTree = "<group>"; };
+		9E90F8221A0E8FA000B0B1FA /* back-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-25.png"; sourceTree = "<group>"; };
+		9E90F8241A0E901900B0B1FA /* dividerLine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dividerLine.png; sourceTree = "<group>"; };
+		9E90F8261A0E921600B0B1FA /* happyFace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = happyFace.png; sourceTree = "<group>"; };
+		9E90F8281A0E93FC00B0B1FA /* dividerLine copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dividerLine copy.png"; sourceTree = "<group>"; };
+		9E90F82A1A0E9E6D00B0B1FA /* SCErrorHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCErrorHandler.h; sourceTree = "<group>"; };
+		9E90F82B1A0E9E6D00B0B1FA /* SCErrorHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCErrorHandler.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E90F8161A0E26C700B0B1FA /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,12 +109,27 @@
 		9E90F7E31A0E08C300B0B1FA /* Cipher */ = {
 			isa = PBXGroup;
 			children = (
+				9E90F8281A0E93FC00B0B1FA /* dividerLine copy.png */,
+				9E90F81E1A0E569A00B0B1FA /* Wolf in the City Light.ttf */,
+				9E90F8151A0E26C700B0B1FA /* FacebookSDK.framework */,
+				9E90F80B1A0E08EF00B0B1FA /* init.png */,
+				9E90F81A1A0E508400B0B1FA /* BearBlur.png */,
+				9E90F8201A0E8F1900B0B1FA /* back-32.png */,
+				9E90F8221A0E8FA000B0B1FA /* back-25.png */,
+				9E90F8241A0E901900B0B1FA /* dividerLine.png */,
+				9E90F8261A0E921600B0B1FA /* happyFace.png */,
 				9E90F80A1A0E08EF00B0B1FA /* Assets */,
 				9E90F7E81A0E08C300B0B1FA /* AppDelegate.h */,
 				9E90F7E91A0E08C300B0B1FA /* AppDelegate.m */,
-				9E90F7EB1A0E08C300B0B1FA /* ViewController.h */,
-				9E90F7EC1A0E08C300B0B1FA /* ViewController.m */,
+				9E90F8121A0E22B500B0B1FA /* Feed.h */,
+				9E90F8131A0E22B500B0B1FA /* Feed.m */,
+				9E90F7EB1A0E08C300B0B1FA /* Login.h */,
+				9E90F7EC1A0E08C300B0B1FA /* Login.m */,
+				9E90F8171A0E377C00B0B1FA /* SCSettings.h */,
+				9E90F8181A0E377C00B0B1FA /* SCSettings.m */,
 				9E90F7EE1A0E08C400B0B1FA /* Main.storyboard */,
+				9E90F82A1A0E9E6D00B0B1FA /* SCErrorHandler.h */,
+				9E90F82B1A0E9E6D00B0B1FA /* SCErrorHandler.m */,
 				9E90F7F11A0E08C400B0B1FA /* Images.xcassets */,
 				9E90F7F31A0E08C400B0B1FA /* LaunchScreen.xib */,
 				9E90F7E41A0E08C300B0B1FA /* Supporting Files */,
@@ -125,7 +166,6 @@
 		9E90F80A1A0E08EF00B0B1FA /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				9E90F80B1A0E08EF00B0B1FA /* init.png */,
 			);
 			name = Assets;
 			path = ../Assets;
@@ -180,6 +220,7 @@
 				TargetAttributes = {
 					9E90F7E01A0E08C300B0B1FA = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 85G3T623Y2;
 					};
 					9E90F7F91A0E08C400B0B1FA = {
 						CreatedOnToolsVersion = 6.1;
@@ -213,6 +254,13 @@
 			files = (
 				9E90F7F01A0E08C400B0B1FA /* Main.storyboard in Resources */,
 				9E90F7F51A0E08C400B0B1FA /* LaunchScreen.xib in Resources */,
+				9E90F8211A0E8F1900B0B1FA /* back-32.png in Resources */,
+				9E90F8251A0E901900B0B1FA /* dividerLine.png in Resources */,
+				9E90F8291A0E93FC00B0B1FA /* dividerLine copy.png in Resources */,
+				9E90F8231A0E8FA000B0B1FA /* back-25.png in Resources */,
+				9E90F8271A0E921600B0B1FA /* happyFace.png in Resources */,
+				9E90F81B1A0E508400B0B1FA /* BearBlur.png in Resources */,
+				9E90F81F1A0E569A00B0B1FA /* Wolf in the City Light.ttf in Resources */,
 				9E90F7F21A0E08C400B0B1FA /* Images.xcassets in Resources */,
 				9E90F80C1A0E08EF00B0B1FA /* init.png in Resources */,
 			);
@@ -232,7 +280,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E90F7ED1A0E08C300B0B1FA /* ViewController.m in Sources */,
+				9E90F7ED1A0E08C300B0B1FA /* Login.m in Sources */,
+				9E90F82C1A0E9E6D00B0B1FA /* SCErrorHandler.m in Sources */,
+				9E90F8191A0E377C00B0B1FA /* SCSettings.m in Sources */,
+				9E90F8141A0E22B500B0B1FA /* Feed.m in Sources */,
 				9E90F7EA1A0E08C300B0B1FA /* AppDelegate.m in Sources */,
 				9E90F7E71A0E08C300B0B1FA /* main.m in Sources */,
 			);
@@ -356,6 +407,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Cipher",
+				);
 				INFOPLIST_FILE = Cipher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -366,6 +422,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Cipher",
+				);
 				INFOPLIST_FILE = Cipher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
