@@ -13,11 +13,17 @@
 @interface RecordScreen : UIViewController
 - (IBAction)playBeat:(id)sender;
 - (IBAction)recordFreestyle:(id)sender;
+-(BOOL) prefersStatusBarHidden;
 @property (weak, nonatomic) NSURL *beatURL;
 @property (nonatomic) AVAudioPlayer *backgroundMusicPlayer;
 @property (nonatomic) AVAudioRecorder *audioRecorder;
-
+@property (weak, nonatomic) IBOutlet UIButton *playButton;
+@property (weak, nonatomic) IBOutlet UILabel *seconds;
+@property (weak, nonatomic) IBOutlet UIProgressView *progress;
 
 @end
 BOOL recording = NO;
 BOOL beatPlaying = NO;
+
+int mainInt;
+NSTimer *timer;

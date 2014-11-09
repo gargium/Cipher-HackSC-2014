@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <FacebookSDK/FacebookSDK.h> 
+#import <FacebookSDK/FacebookSDK.h>
+@interface Feed : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UITableView *entriesOutlet;
+@property NSMutableArray *entries;
 
-@interface Feed : UIViewController
 
 - (IBAction)showFeed:(UIStoryboardSegue*)segue;
-- (BOOL) prefersStatusBarHidden; 
-- (void) setViewDefaults; 
+- (BOOL) prefersStatusBarHidden;
+- (void) setViewDefaults;
 @end
 

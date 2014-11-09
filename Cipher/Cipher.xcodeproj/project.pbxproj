@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E5225BC1A0EC20000E4209E /* waveform.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E5225BB1A0EC20000E4209E /* waveform.png */; };
+		9E5225C01A0EC71B00E4209E /* appbar.cloud.upload.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E5225BD1A0EC71B00E4209E /* appbar.cloud.upload.png */; };
+		9E5225C11A0EC71B00E4209E /* appbar.control.play.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E5225BE1A0EC71B00E4209E /* appbar.control.play.png */; };
+		9E5225C21A0EC71B00E4209E /* appbar.timer.record.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E5225BF1A0EC71B00E4209E /* appbar.timer.record.png */; };
+		9E5225C41A0EE8EB00E4209E /* micro-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E5225C31A0EE8EB00E4209E /* micro-512.png */; };
+		9E5225C71A0EEC1E00E4209E /* SubmissionScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5225C61A0EEC1E00E4209E /* SubmissionScreen.m */; };
+		9E5225C91A0EFC5B00E4209E /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E5225C81A0EFC5B00E4209E /* pause.png */; };
 		9E90F7E71A0E08C300B0B1FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E90F7E61A0E08C300B0B1FA /* main.m */; };
 		9E90F7EA1A0E08C300B0B1FA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E90F7E91A0E08C300B0B1FA /* AppDelegate.m */; };
 		9E90F7ED1A0E08C300B0B1FA /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E90F7EC1A0E08C300B0B1FA /* Login.m */; };
@@ -40,6 +47,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9E5225BB1A0EC20000E4209E /* waveform.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = waveform.png; sourceTree = "<group>"; };
+		9E5225BD1A0EC71B00E4209E /* appbar.cloud.upload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appbar.cloud.upload.png; sourceTree = "<group>"; };
+		9E5225BE1A0EC71B00E4209E /* appbar.control.play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appbar.control.play.png; sourceTree = "<group>"; };
+		9E5225BF1A0EC71B00E4209E /* appbar.timer.record.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appbar.timer.record.png; sourceTree = "<group>"; };
+		9E5225C31A0EE8EB00E4209E /* micro-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "micro-512.png"; sourceTree = "<group>"; };
+		9E5225C51A0EEC1E00E4209E /* SubmissionScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmissionScreen.h; sourceTree = "<group>"; };
+		9E5225C61A0EEC1E00E4209E /* SubmissionScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmissionScreen.m; sourceTree = "<group>"; };
+		9E5225C81A0EFC5B00E4209E /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
 		9E90F7E11A0E08C300B0B1FA /* Cipher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cipher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E90F7E51A0E08C300B0B1FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E90F7E61A0E08C300B0B1FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -116,12 +131,17 @@
 				9E90F8281A0E93FC00B0B1FA /* dividerLine copy.png */,
 				9E90F81E1A0E569A00B0B1FA /* Wolf in the City Light.ttf */,
 				9E90F8151A0E26C700B0B1FA /* FacebookSDK.framework */,
+				9E5225BB1A0EC20000E4209E /* waveform.png */,
 				9E90F80B1A0E08EF00B0B1FA /* init.png */,
 				9E90F81A1A0E508400B0B1FA /* BearBlur.png */,
 				9E90F8201A0E8F1900B0B1FA /* back-32.png */,
 				9E90F8221A0E8FA000B0B1FA /* back-25.png */,
+				9E5225BD1A0EC71B00E4209E /* appbar.cloud.upload.png */,
+				9E5225BE1A0EC71B00E4209E /* appbar.control.play.png */,
+				9E5225BF1A0EC71B00E4209E /* appbar.timer.record.png */,
 				9E90F8241A0E901900B0B1FA /* dividerLine.png */,
 				9E90F8261A0E921600B0B1FA /* happyFace.png */,
+				9E5225C31A0EE8EB00E4209E /* micro-512.png */,
 				9E90F80A1A0E08EF00B0B1FA /* Assets */,
 				9E90F7E81A0E08C300B0B1FA /* AppDelegate.h */,
 				9E90F7E91A0E08C300B0B1FA /* AppDelegate.m */,
@@ -132,6 +152,9 @@
 				9E90F8171A0E377C00B0B1FA /* SCSettings.h */,
 				9E90F8181A0E377C00B0B1FA /* SCSettings.m */,
 				9E90F7EE1A0E08C400B0B1FA /* Main.storyboard */,
+				9E5225C81A0EFC5B00E4209E /* pause.png */,
+				9E5225C51A0EEC1E00E4209E /* SubmissionScreen.h */,
+				9E5225C61A0EEC1E00E4209E /* SubmissionScreen.m */,
 				D537C73E1A0EBD720037AADC /* RecordScreen.h */,
 				D537C73F1A0EBD720037AADC /* RecordScreen.m */,
 				9E90F82A1A0E9E6D00B0B1FA /* SCErrorHandler.h */,
@@ -261,13 +284,19 @@
 				9E90F8211A0E8F1900B0B1FA /* back-32.png in Resources */,
 				9E90F8251A0E901900B0B1FA /* dividerLine.png in Resources */,
 				D537C73D1A0EBC2A0037AADC /* beat.m4a in Resources */,
+				9E5225C21A0EC71B00E4209E /* appbar.timer.record.png in Resources */,
 				9E90F8291A0E93FC00B0B1FA /* dividerLine copy.png in Resources */,
 				9E90F8231A0E8FA000B0B1FA /* back-25.png in Resources */,
+				9E5225C01A0EC71B00E4209E /* appbar.cloud.upload.png in Resources */,
+				9E5225BC1A0EC20000E4209E /* waveform.png in Resources */,
 				9E90F8271A0E921600B0B1FA /* happyFace.png in Resources */,
 				9E90F81B1A0E508400B0B1FA /* BearBlur.png in Resources */,
 				9E90F81F1A0E569A00B0B1FA /* Wolf in the City Light.ttf in Resources */,
 				9E90F7F21A0E08C400B0B1FA /* Images.xcassets in Resources */,
 				9E90F80C1A0E08EF00B0B1FA /* init.png in Resources */,
+				9E5225C91A0EFC5B00E4209E /* pause.png in Resources */,
+				9E5225C11A0EC71B00E4209E /* appbar.control.play.png in Resources */,
+				9E5225C41A0EE8EB00E4209E /* micro-512.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E90F7ED1A0E08C300B0B1FA /* Login.m in Sources */,
+				9E5225C71A0EEC1E00E4209E /* SubmissionScreen.m in Sources */,
 				9E90F82C1A0E9E6D00B0B1FA /* SCErrorHandler.m in Sources */,
 				9E90F8191A0E377C00B0B1FA /* SCSettings.m in Sources */,
 				9E90F8141A0E22B500B0B1FA /* Feed.m in Sources */,

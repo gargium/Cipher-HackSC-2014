@@ -10,21 +10,27 @@
 
 @interface RecordScreen ()
 
+
+
 @end
 
 @implementation RecordScreen
 
 NSURL *reUrl;
 
-@synthesize beatURL, backgroundMusicPlayer, audioRecorder;
+@synthesize beatURL, backgroundMusicPlayer, audioRecorder, playButton, seconds, progress;
 
+
+-(BOOL) prefersStatusBarHidden {
+    return YES;
+}
 - (void)viewDidLoad {
-    /*
-     UIImage *backgroundImage = [UIImage imageNamed:@"init.png"];
+    
+    seconds.text = @"10";
+     UIImage *backgroundImage = [UIImage imageNamed:@"BearBlur.png"];
      UIImageView *backgroundImageView = [[UIImageView alloc] initWithFrame:self.view.frame];
      backgroundImageView.image = backgroundImage;
      [self.view insertSubview:backgroundImageView atIndex:0];
-     */
     
     NSArray *pathComponents = [NSArray arrayWithObjects:
                                [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject],
@@ -55,10 +61,18 @@ NSURL *reUrl;
     if(!beatPlaying){
         [self playBeat];
         beatPlaying = YES;
+        //changes to pause
+        UIImage *pauseImage = [UIImage imageNamed:@"pause.png"];
+        [playButton setImage:pauseImage forState:UIControlStateNormal];
+        
     }
     else{
         [backgroundMusicPlayer stop];
         beatPlaying = NO;
+        //changes to play
+        UIImage *playImage = [UIImage imageNamed:@"appbar.control.play.png"];
+        [playButton setImage:playImage forState:UIControlStateNormal];
+        
     }
     
 }
@@ -79,20 +93,41 @@ NSURL *reUrl;
     [backgroundMusicPlayer play];
 }
 
+-(void) countDown {
+    mainInt--;
+    progress.progress = (float)(mainInt/10.0f);
+    seconds.text = [NSString stringWithFormat:@"%i", mainInt];
+    if (mainInt == 0) {
+        [timer invalidate];
+        [self recordFreestyle:self];
+    }
+
+}
+
 - (IBAction)recordFreestyle:(id)sender {
     NSError *error;
     
+    
+    
+    
     if(!recording){
+        mainInt = 10;
+        timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(countDown) userInfo:nil repeats:YES];
         NSLog([[audioRecorder url] path]);
         [self playBeat];
         [audioRecorder record];
         NSLog(@"recording");
         recording = YES;
+        
     }
     else{
         if(audioRecorder){
             [audioRecorder stop];
+            mainInt = 10;
+            [timer invalidate];
         }
+        
+        
         recording = NO;
         UInt32 audioRouteOverride = kAudioSessionOverrideAudioRoute_Speaker;
         [[AVAudioSession sharedInstance] setCategory: AVAudioSessionCategoryPlayAndRecord error: &error];
@@ -108,8 +143,12 @@ NSURL *reUrl;
         backgroundMusicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:reUrl error:&error];
         [backgroundMusicPlayer prepareToPlay];
         [backgroundMusicPlayer play];
-        
     }
+    
+    
+///addd timer code here
+    //[timer start]
+    //timer code goes here. call click events to make sure that we only run it when the its the first time. reset on the second and call the click again to amke sure that we're writing to file.
 }
 
 
