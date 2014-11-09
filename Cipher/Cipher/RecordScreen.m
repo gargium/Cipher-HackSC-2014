@@ -16,6 +16,9 @@
 
 @implementation RecordScreen
 
+int plays;
+int startTime;
+NSUserDefaults *defaults;
 NSURL *reUrl;
 
 @synthesize beatURL, backgroundMusicPlayer, audioRecorder, playButton, seconds, progress;
@@ -25,6 +28,7 @@ NSURL *reUrl;
     return YES;
 }
 - (void)viewDidLoad {
+
     
     seconds.text = @"10";
      UIImage *backgroundImage = [UIImage imageNamed:@"BearBlur.png"];
@@ -32,11 +36,27 @@ NSURL *reUrl;
      backgroundImageView.image = backgroundImage;
      [self.view insertSubview:backgroundImageView atIndex:0];
     
+    defaults = [NSUserDefaults standardUserDefaults];
+    if([defaults objectForKey:@"BeatPlays"]){
+        plays = [defaults integerForKey:@"BeatPlays"]+1;
+    } else{
+        plays = 1;
+    }
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSString *filename = [NSString stringWithFormat:@"%d.m4a", plays];
+    NSArray *searchPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentPath = [searchPaths objectAtIndex:0];
+    NSString *recordingsPath = [documentPath stringByAppendingPathComponent:@"recordings"];
+    if (![fileManager fileExistsAtPath:recordingsPath]) {
+        [fileManager createDirectoryAtPath:recordingsPath withIntermediateDirectories:NO attributes:nil error:nil];
+    }
+    
     NSArray *pathComponents = [NSArray arrayWithObjects:
-                               [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject],
-                               @"freestyle.m4a",
+                               recordingsPath,
+                               filename,
                                nil];
     reUrl = [NSURL fileURLWithPathComponents:pathComponents];
+    [defaults setObject:filename forKey:@"reUrlFilename"];
     NSLog([reUrl path]);
     
     NSDictionary *audioSettings = [NSDictionary dictionaryWithObjectsAndKeys:
@@ -89,6 +109,10 @@ NSURL *reUrl;
     UInt32 audioRouteOverride = kAudioSessionOverrideAudioRoute_Speaker;
     AudioSessionSetProperty (kAudioSessionProperty_OverrideAudioRoute,sizeof (audioRouteOverride),&audioRouteOverride);
     backgroundMusicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error: &error];
+    startTime = 10*(plays-1);
+    if(startTime <= backgroundMusicPlayer.duration-10){
+        backgroundMusicPlayer.currentTime = startTime;
+    }
     [backgroundMusicPlayer prepareToPlay];
     [backgroundMusicPlayer play];
 }
@@ -198,4 +222,7 @@ NSURL *reUrl;
  **/
 
 
+- (IBAction)uploadAction:(id)sender {
+    [backgroundMusicPlayer stop];
+}
 @end

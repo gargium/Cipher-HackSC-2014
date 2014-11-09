@@ -14,9 +14,13 @@
 
 @implementation SubmissionScreen
 
-@synthesize entries, stitchedSongButton;
+@synthesize entries, stitchedSongButton,backgroundMusicPlayer, backgroundMusicPlayer2, waveform, completionLabel;
 
 bool flag = YES;
+
+NSUserDefaults *defaults;
+int plays;
+NSURL *reUrl;
 
 -(BOOL) prefersStatusBarHidden {
     return YES;
@@ -30,15 +34,51 @@ bool flag = YES;
 - (IBAction)playStitchedSong:(id)sender {
     UIImage *play = [UIImage imageNamed:@"playSubmission.png"];
     UIImage *pause = [UIImage imageNamed:@"pauseSummation.png"];
-    
+    NSError *error;
     
     if (flag) {
         [stitchedSongButton setImage:pause forState:UIControlStateNormal];
         flag = NO;
+        NSString *filename = [NSString stringWithFormat:@"%d.m4a", plays-1];
+        NSArray *searchPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *documentPath = [searchPaths objectAtIndex:0];
+        NSString *recordingsPath = [documentPath stringByAppendingPathComponent:@"recordings"];
+        
+        NSArray *pathComponents = [NSArray arrayWithObjects:
+                                   recordingsPath,
+                                   filename,
+                                   nil];
+        NSURL *reUrl1 = [NSURL fileURLWithPathComponents:pathComponents];
+        UInt32 audioRouteOverride = kAudioSessionOverrideAudioRoute_Speaker;
+        [[AVAudioSession sharedInstance] setCategory: AVAudioSessionCategoryPlayAndRecord error: &error];
+        
+        AudioSessionSetProperty (kAudioSessionProperty_OverrideAudioRoute,sizeof (audioRouteOverride),&audioRouteOverride);
+        
+        backgroundMusicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:reUrl error:&error];
+        
+        
+        backgroundMusicPlayer2 = [[AVAudioPlayer alloc] initWithContentsOfURL:reUrl1 error:&error];
+        [backgroundMusicPlayer2 prepareToPlay];
+        [backgroundMusicPlayer prepareToPlay];
+        
+        NSTimeInterval now = backgroundMusicPlayer2.deviceCurrentTime;
+        
+        
+        [backgroundMusicPlayer2 play];
+        
+        //wait 10 secs
+        [backgroundMusicPlayer playAtTime:now + 10.0];
+
     }
     else {
         [stitchedSongButton setImage:play forState:UIControlStateNormal];
         flag = YES;
+        if(backgroundMusicPlayer.isPlaying){
+            [backgroundMusicPlayer pause];
+        }
+        if(backgroundMusicPlayer2.isPlaying){
+            [backgroundMusicPlayer2 pause];
+        }
         
     }
 }
@@ -139,6 +179,26 @@ bool flag = YES;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setInteger:[defaults integerForKey:@"BeatPlays"]+1 forKey:@"BeatPlays"];
+    [defaults synchronize];
+    plays = [defaults integerForKey:@"BeatPlays"];
+    if(plays>1){
+        [waveform setImage:[UIImage imageNamed:@"waveformtwo.png"]];
+        [self.view insertSubview:waveform atIndex:0];
+        completionLabel.text = [NSString stringWithFormat:@"%i%% has been freestyled", 34];
+    }
+    NSString *filename = [defaults objectForKey:@"reUrlFilename"];
+    NSArray *searchPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentPath = [searchPaths objectAtIndex:0];
+    NSString *recordingsPath = [documentPath stringByAppendingPathComponent:@"recordings"];
+    
+    NSArray *pathComponents = [NSArray arrayWithObjects:
+                               recordingsPath,
+                               filename,
+                               nil];
+    reUrl = [NSURL fileURLWithPathComponents:pathComponents];
+
     entries = [[NSMutableArray alloc] init];
     NSArray *data  = @[@{
                            

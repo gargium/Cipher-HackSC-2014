@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A361p" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
@@ -312,9 +312,6 @@
                                     <outlet property="delegate" destination="Pby-R9-Edn" id="ZyT-fe-Yhy"/>
                                 </connections>
                             </tableView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="waveform.png" translatesAutoresizingMaskIntoConstraints="NO" id="ppv-7S-oet">
-                                <rect key="frame" x="10" y="146" width="300" height="100"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVY-dt-A1h">
                                 <rect key="frame" x="128" y="164" width="64" height="64"/>
                                 <state key="normal" image="playSubmission.png">
@@ -324,13 +321,18 @@
                                     <action selector="playStitchedSong:" destination="Pby-R9-Edn" eventType="touchUpInside" id="0Iu-h9-16k"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="waveform.png" translatesAutoresizingMaskIntoConstraints="NO" id="ppv-7S-oet">
+                                <rect key="frame" x="10" y="146" width="300" height="100"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.95294123890000004" green="0.74901962280000001" blue="0.14509804549999999" alpha="1" colorSpace="deviceRGB"/>
                     </view>
                     <connections>
+                        <outlet property="completionLabel" destination="egm-0r-z8b" id="RPZ-ZB-kg7"/>
                         <outlet property="entriesOutlet" destination="V7u-nu-vZH" id="2dM-ir-cbr"/>
                         <outlet property="stitchedSongButton" destination="NVY-dt-A1h" id="cG1-Pm-P9V"/>
+                        <outlet property="waveform" destination="ppv-7S-oet" id="HxW-Wf-xfX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CtT-hl-691" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -554,6 +556,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="uploadAction:" destination="4Zq-gB-Ai6" eventType="touchUpInside" id="H7C-Ly-69t"/>
                                     <segue destination="Pby-R9-Edn" kind="presentation" id="k72-8V-ifi"/>
                                 </connections>
                             </button>
@@ -588,7 +591,7 @@
         <image name="waveform.png" width="1100" height="619"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3M0-OW-Npc"/>
         <segue reference="hN0-CA-5cE"/>
+        <segue reference="tCN-sM-9O2"/>
     </inferredMetricsTieBreakers>
 </document>
