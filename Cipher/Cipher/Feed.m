@@ -162,6 +162,8 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     cell.textLabel.text = [entries objectAtIndex:indexPath.row];
+    cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:14.0];
+    cell.textLabel.textColor = [UIColor blackColor];
     return cell;
 }
 

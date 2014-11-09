@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <FacebookSDK/FacebookSDK.h>
+#import "SCErrorHandler.h"
 
 
 
@@ -55,6 +56,24 @@
          annotation:(id)annotation {
     // attempt to extract a token from the url
     return [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
+}
+
+- (void)_handleOpenURLWithAccessToken:(FBAccessTokenData *)token {
+    // Initialize a new blank session instance...
+    FBSession *sessionFromToken = [[FBSession alloc] initWithAppID:nil
+                                                       permissions:nil
+                                                   defaultAudience:FBSessionDefaultAudienceNone
+                                                   urlSchemeSuffix:nil
+                                                tokenCacheStrategy:[FBSessionTokenCachingStrategy nullCacheInstance] ];
+    [FBSession setActiveSession:sessionFromToken];
+    // ... and open it from the supplied token.
+    [sessionFromToken openFromAccessTokenData:token
+                            completionHandler:^(FBSession *session, FBSessionState status, NSError *error) {
+                                // Forward any errors to the FBLoginView delegate.
+                                if (error) {
+                                    SCHandleError(error);
+                                }
+                            }];
 }
     
 @end

@@ -62,9 +62,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="waveform.png" translatesAutoresizingMaskIntoConstraints="NO" id="ppv-7S-oet">
-                                <rect key="frame" x="10" y="146" width="300" height="100"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="YOU CONTRIBUTED TO:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Igb-l2-MMN">
                                 <rect key="frame" x="96" y="58" width="126" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="12"/>
@@ -156,6 +153,9 @@
                                 <state key="normal" title="Invite friends!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="inviteFriends:" destination="Pby-R9-Edn" eventType="touchUpInside" id="2UR-x4-fTE"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XG2-s3-Njq">
                                 <rect key="frame" x="164" y="285" width="44" height="34"/>
@@ -163,6 +163,9 @@
                                 <state key="normal" title="Share">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="shareOnFacebook:" destination="Pby-R9-Edn" eventType="touchUpInside" id="R5J-VG-7Jf"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2SF-gK-9bb">
                                 <rect key="frame" x="229" y="285" width="44" height="34"/>
@@ -170,6 +173,9 @@
                                 <state key="normal" title="Tweet">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="tweet:" destination="Pby-R9-Edn" eventType="touchUpInside" id="IB9-OP-QJj"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="|" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Emz-DN-FZM">
                                 <rect key="frame" x="152" y="291" width="4" height="21"/>
@@ -285,36 +291,51 @@
                                 </prototypes>
                                 <sections/>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" 67% has been freestyled" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egm-0r-z8b">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" 17% has been freestyled" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egm-0r-z8b">
                                 <rect key="frame" x="66" y="254" width="186" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="V7u-nu-vZH">
-                                <rect key="frame" x="10" y="326" width="300" height="228"/>
+                                <rect key="frame" x="45" y="326" width="230" height="228"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                 <tableView key="tableFooterView" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="OZw-aO-oaU">
-                                    <rect key="frame" x="16" y="326" width="300" height="228"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="230" height="228"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </tableView>
+                                <sections/>
                                 <connections>
                                     <outlet property="dataSource" destination="Pby-R9-Edn" id="2Ac-gK-R9a"/>
                                     <outlet property="delegate" destination="Pby-R9-Edn" id="ZyT-fe-Yhy"/>
                                 </connections>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="waveform.png" translatesAutoresizingMaskIntoConstraints="NO" id="ppv-7S-oet">
+                                <rect key="frame" x="10" y="146" width="300" height="100"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVY-dt-A1h">
+                                <rect key="frame" x="128" y="164" width="64" height="64"/>
+                                <state key="normal" image="playSubmission.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playStitchedSong:" destination="Pby-R9-Edn" eventType="touchUpInside" id="0Iu-h9-16k"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.95294123890000004" green="0.74901962280000001" blue="0.14509804549999999" alpha="1" colorSpace="deviceRGB"/>
                     </view>
                     <connections>
                         <outlet property="entriesOutlet" destination="V7u-nu-vZH" id="2dM-ir-cbr"/>
+                        <outlet property="stitchedSongButton" destination="NVY-dt-A1h" id="cG1-Pm-P9V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CtT-hl-691" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="82" y="900"/>
+            <point key="canvasLocation" x="94" y="900"/>
         </scene>
         <!--Feed-->
         <scene sceneID="b6q-2Y-Oob">
@@ -443,6 +464,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="neI-Mg-37e">
                                 <rect key="frame" x="11" y="114" width="300" height="451"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                 <connections>
                                     <outlet property="dataSource" destination="mtA-SO-bD2" id="tcj-DH-9mi"/>
                                     <outlet property="delegate" destination="mtA-SO-bD2" id="vxw-QP-sLt"/>
@@ -562,10 +584,11 @@
         <image name="dividerLine copy.png" width="12" height="640"/>
         <image name="dividerLine.png" width="640" height="12"/>
         <image name="micro-512.png" width="512" height="512"/>
+        <image name="playSubmission.png" width="512" height="512"/>
         <image name="waveform.png" width="1100" height="619"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="3M0-OW-Npc"/>
         <segue reference="hN0-CA-5cE"/>
-        <segue reference="tCN-sM-9O2"/>
     </inferredMetricsTieBreakers>
 </document>

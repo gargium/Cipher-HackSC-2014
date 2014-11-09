@@ -14,6 +14,9 @@
 		9E5225C41A0EE8EB00E4209E /* micro-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E5225C31A0EE8EB00E4209E /* micro-512.png */; };
 		9E5225C71A0EEC1E00E4209E /* SubmissionScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5225C61A0EEC1E00E4209E /* SubmissionScreen.m */; };
 		9E5225C91A0EFC5B00E4209E /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E5225C81A0EFC5B00E4209E /* pause.png */; };
+		9E5225CB1A0F32CE00E4209E /* playSubmission.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E5225CA1A0F32CE00E4209E /* playSubmission.png */; };
+		9E5225CD1A0F44A200E4209E /* pauseSummation.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E5225CC1A0F44A200E4209E /* pauseSummation.png */; };
+		9E5225CF1A0F4F9600E4209E /* waveformtwo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E5225CE1A0F4F9600E4209E /* waveformtwo.png */; };
 		9E90F7E71A0E08C300B0B1FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E90F7E61A0E08C300B0B1FA /* main.m */; };
 		9E90F7EA1A0E08C300B0B1FA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E90F7E91A0E08C300B0B1FA /* AppDelegate.m */; };
 		9E90F7ED1A0E08C300B0B1FA /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E90F7EC1A0E08C300B0B1FA /* Login.m */; };
@@ -55,6 +58,9 @@
 		9E5225C51A0EEC1E00E4209E /* SubmissionScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmissionScreen.h; sourceTree = "<group>"; };
 		9E5225C61A0EEC1E00E4209E /* SubmissionScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmissionScreen.m; sourceTree = "<group>"; };
 		9E5225C81A0EFC5B00E4209E /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
+		9E5225CA1A0F32CE00E4209E /* playSubmission.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playSubmission.png; sourceTree = "<group>"; };
+		9E5225CC1A0F44A200E4209E /* pauseSummation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pauseSummation.png; path = Cipher/pauseSummation.png; sourceTree = "<group>"; };
+		9E5225CE1A0F4F9600E4209E /* waveformtwo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = waveformtwo.png; sourceTree = "<group>"; };
 		9E90F7E11A0E08C300B0B1FA /* Cipher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cipher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E90F7E51A0E08C300B0B1FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E90F7E61A0E08C300B0B1FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -109,6 +115,7 @@
 		9E90F7D81A0E08C300B0B1FA = {
 			isa = PBXGroup;
 			children = (
+				9E5225CC1A0F44A200E4209E /* pauseSummation.png */,
 				9E90F7E31A0E08C300B0B1FA /* Cipher */,
 				9E90F7FD1A0E08C400B0B1FA /* CipherTests */,
 				9E90F7E21A0E08C300B0B1FA /* Products */,
@@ -127,6 +134,8 @@
 		9E90F7E31A0E08C300B0B1FA /* Cipher */ = {
 			isa = PBXGroup;
 			children = (
+				9E5225CE1A0F4F9600E4209E /* waveformtwo.png */,
+				9E5225CA1A0F32CE00E4209E /* playSubmission.png */,
 				D537C73C1A0EBC2A0037AADC /* beat.m4a */,
 				9E90F8281A0E93FC00B0B1FA /* dividerLine copy.png */,
 				9E90F81E1A0E569A00B0B1FA /* Wolf in the City Light.ttf */,
@@ -283,8 +292,10 @@
 				9E90F7F01A0E08C400B0B1FA /* Main.storyboard in Resources */,
 				9E90F8211A0E8F1900B0B1FA /* back-32.png in Resources */,
 				9E90F8251A0E901900B0B1FA /* dividerLine.png in Resources */,
+				9E5225CF1A0F4F9600E4209E /* waveformtwo.png in Resources */,
 				D537C73D1A0EBC2A0037AADC /* beat.m4a in Resources */,
 				9E5225C21A0EC71B00E4209E /* appbar.timer.record.png in Resources */,
+				9E5225CD1A0F44A200E4209E /* pauseSummation.png in Resources */,
 				9E90F8291A0E93FC00B0B1FA /* dividerLine copy.png in Resources */,
 				9E90F8231A0E8FA000B0B1FA /* back-25.png in Resources */,
 				9E5225C01A0EC71B00E4209E /* appbar.cloud.upload.png in Resources */,
@@ -295,6 +306,7 @@
 				9E90F7F21A0E08C400B0B1FA /* Images.xcassets in Resources */,
 				9E90F80C1A0E08EF00B0B1FA /* init.png in Resources */,
 				9E5225C91A0EFC5B00E4209E /* pause.png in Resources */,
+				9E5225CB1A0F32CE00E4209E /* playSubmission.png in Resources */,
 				9E5225C11A0EC71B00E4209E /* appbar.control.play.png in Resources */,
 				9E5225C41A0EE8EB00E4209E /* micro-512.png in Resources */,
 			);

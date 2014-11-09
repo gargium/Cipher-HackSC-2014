@@ -15,10 +15,11 @@
 @interface ViewController ()
 
 @end
-@implementation ViewController
+@implementation ViewController {
 
 BOOL _viewIsVisible;
 BOOL _viewDidAppear;
+}
 
 - (BOOL) prefersStatusBarHidden {
     return YES;
@@ -37,11 +38,6 @@ BOOL _viewDidAppear;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    FBLoginView *loginView = [[FBLoginView alloc] init];
-//    //loginView.center = self.view.center;
-//    loginView.frame = CGRectMake(self.view.frame.size.width/5.8, self.view.frame.size.height-100, self.view.frame.size.width /1.5, 50);
-//    [self.view addSubview:loginView];
-    
     self.loginView.readPermissions = @[@"public_profile", @"user_friends"];
     
     UIImage *backgroundImage = [UIImage imageNamed:@"init.png"];
@@ -49,11 +45,6 @@ BOOL _viewDidAppear;
     backgroundImageView.image = backgroundImage;
     [self.view insertSubview:backgroundImageView atIndex:0];
     
-//    UITapGestureRecognizer *taps = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(removeKeyboard)];
-//    [self.view addGestureRecognizer:taps];
-    
-
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -78,6 +69,16 @@ BOOL _viewDidAppear;
     }
 
 }
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    [SCSettings defaultSettings].shouldSkipLogin = YES;
+    _viewIsVisible = NO;
+}
+
+
 
 - (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView
 {
